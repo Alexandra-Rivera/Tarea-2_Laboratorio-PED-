@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std; 
+
+//Declaración de la función
+int funcion_mayormenor(int, int); 
+
+//Se le solicitan 2 números al usuario.
+int main (void){
+    int n1, n2; 
+    cout << endl; 
+    cout << "MAXIMO COMUN DIVISOR POR EL METODO DE EUCLIDES" << endl; 
+    cout << "Ingrese dos numeros enteros"<< endl;
+    cout << "Numero mayor: "; cin >> n1; 
+    cout << "Numero menor: "; cin >> n2; 
+
+    cout << "EL MAXIMO COMUN DIVISOR ES: " << funcion_mayormenor(n1, n2); 
+
+    cout << endl; 
+    return 0; 
+}
+
+//Funcion
+int funcion_mayormenor(int mayor, int menor){
+    int residuo = mayor % menor; 
+    if (residuo == 0){
+        return menor; 
+    }else if (residuo != 0){ 
+        mayor = menor; 
+        menor = residuo; 
+        return funcion_mayormenor(mayor, menor);
+    }
+}
+
+//Fin//
