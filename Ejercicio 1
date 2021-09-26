@@ -4,7 +4,7 @@ using namespace std;
 //Declaración de la función
 int funcion_mayormenor(int, int); 
 
-//Se le solicitan 2 números al usuario.
+//Se solicitan 2 números desde teclado.
 int main (void){
     int n1, n2; 
     cout << endl; 
